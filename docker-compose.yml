@@ -7,7 +7,8 @@ services:
     ports:
       - "8081:80"
     volumes:
-      - ./desarrollo:/usr/share/nginx/html
+      # Corregido: apunta a tu carpeta real 'desarrollo'
+      - ./desarrollo:/usr/share/nginx/index.html
 
   contenedor-beta:
     image: nginx:alpine
@@ -15,4 +16,5 @@ services:
     ports:
       - "8082:80"
     volumes:
-      - ./produccion:/usr/share/nginx/html
+      # Corregido: apunta a tu carpeta real 'proyecto'
+      - ./proyecto:/usr/share/nginx/index.html
