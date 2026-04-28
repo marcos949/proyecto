@@ -3,17 +3,17 @@ version: '3.8'
 services:
   contenedor-alfa:
     image: nginx:alpine
-    container_name: web-render-1
+    container_name: desarrollo
     ports:
       - "8081:80"
     volumes:
       # Usamos ./ seguido del nombre exacto de la carpeta que subiste a GitHub
-      - ./desarrollo:/usr/share/nginx/html:ro
+      - ./Desarrollo:/usr/share/nginx/html:ro
 
   contenedor-beta:
     image: nginx:alpine
-    container_name: web-render-2
+    container_name: produccion
     ports:
       - "8082:80"
     volumes:
-      - ./proyecto:/usr/share/nginx/html:ro
+      - ./Produccion:/usr/share/nginx/html:ro
