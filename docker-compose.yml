@@ -7,7 +7,7 @@ services:
     ports:
       - "8081:80"
     volumes:
-      - ./web1:/usr/share/nginx/html
+      - ./desarrollo:/usr/share/nginx/html
 
   contenedor-beta:
     image: nginx:alpine
@@ -15,4 +15,4 @@ services:
     ports:
       - "8082:80"
     volumes:
-      - ./web2:/usr/share/nginx/html
+      - ./produccion:/usr/share/nginx/html
